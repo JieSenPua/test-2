@@ -51,13 +51,14 @@ var g = svg.append("g")
 
 
         g.selectAll(".bar")
+
          .data(data)
          .enter().append("rect")
          .attr("class", "bar")
          .attr("x", function(d) { return xScale(d.party); })
-         .attr("y", function(d) { return yScale [parseInt(d.value)]; })
+         .attr("y", function(d) { return yScale parseInt(d.value); })
          .attr("width", xScale.bandwidth())
-         .attr("height", function(d) { return height - yScale [parseInt(d.value)]; });
+         .attr("height", function(d) { return height - yScale parseInt(d.value); });
     });
 </script>
 </body>
